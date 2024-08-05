@@ -62,12 +62,26 @@ export function ConvertForm() {
       <CardContent>
         <div className="space-y-4">
           <h4 className="text-sm font-medium">Input:</h4>
-          <Textarea className={"resize-y"} placeholder="Paste your lines here" value={input} onChange={(event) => setInput(event.target.value)} rows={rows} />
+          <Textarea
+            className={"resize-y"}
+            placeholder="Paste your lines here"
+            value={input}
+            onChange={(event) => setInput(event.target.value)}
+            rows={rows}
+            spellCheck={false}
+            autoCorrect="off"
+          />
         </div>
         <Separator className="my-4" />
         <div className="space-y-4">
           <h4 className="text-sm font-medium">Output:</h4>
-          <Textarea placeholder="Your output will show here" value={output} />
+          <Textarea
+            placeholder="Your output will show here"
+            value={output}
+            spellCheck={false}
+            autoCorrect="off"
+            readOnly
+          />
           <Button
             variant="secondary"
             className="shrink-0 inline-flex items-center space-x-1"
